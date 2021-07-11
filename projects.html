@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚧 Projects</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <span class='bigger'>👦🏻 Alan Douglas - Software Developer / 🚧 Projects</span>
+        <span class='d_control'>
+            <input type="checkbox" class="checkbox" id="chkx">
+            <label onclick="sound.play()" class="label" for="chkx">
+                <i class="fa fa-moon-o"></i>
+                <i class="fa fa-sun-o"></i>
+                <div class="ball"></div>
+            </label>
+        </span>
+    </header>
+
+    <script>
+        var darkMode = localStorage.getItem('dMode');
+
+        const enableDarkMode = () =>{
+            document.body.classList.add('darkmode');
+            localStorage.setItem('dMode', 'enabled');
+        }
+
+        const disableDarkMode = () =>{
+            document.body.classList.remove('darkmode')
+            localStorage.setItem('dMode', 'null');
+        }
+
+        if(darkMode === 'enabled'){
+            enableDarkMode();
+        }
+        else{
+            disableDarkMode();
+        }
+
+        chkx.addEventListener('change', () => {
+            darkMode = localStorage.getItem('dMode');            
+            
+            if(darkMode !== 'enabled'){
+                enableDarkMode();
+            }
+            else{
+                disableDarkMode();
+            }
+        });
+    </script>
+
+    <article>
+        <div class="komkom">
+            <div class='special_emoji'>🚧</div>
+            <h2><b>Projects</b></h2><br>
+
+            <p>Welcome to the projects page, here you'd find some of the projects I've worked on ⚡.</p><br>
+
+            <h4>Ackeron</h4><hr class="marginless">
+
+            <div class="grid">
+                <div class='holder'>
+                    <a href="images/ackeron/home.png"><img src="images/ackeron/home.png" alt=""></a>
+                    <p>Home page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/ackeron/about.png"><img src="images/ackeron/about.png" alt=""></a>
+                    <p>About page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/ackeron/messages.png"><img src="images/ackeron/messages.png" alt=""></a>
+                    <p>Messages page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/ackeron/request.png"><img src="images/ackeron/request.png" alt=""></a>
+                    <p>Friend request page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/ackeron/post.png"><img src="images/ackeron/post.png" alt=""></a>
+                    <p>Posting page</p>
+                </div>
+            </div>
+            <br><br>
+
+            <h4>Shoppee</h4><hr class="marginless">
+
+            <div class="grid">
+                <div class='holder'>
+                    <a href="images/shopee/home.png"><img src="images/shopee/home.png" alt=""></a>
+                    <p>Home page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/shopee/cart.png"><img src="images/shopee/cart.png" alt=""></a>
+                    <p>Cart page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/shopee/product.png"><img src="images/shopee/product.png" alt=""></a>
+                    <p>Product page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/shopee/product2.png"><img src="images/shopee/product2.png" alt=""></a>
+                    <p>Product page</p>
+                </div>
+                <div class='holder'>
+                    <a href="images/shopee/search.png"><img src="images/shopee/search.png" alt=""></a>
+                    <p>Search page</p>
+                </div>
+            </div>
+
+            <div class="push"></div>
+        </div>
+    </article>
+</body>
+</html>

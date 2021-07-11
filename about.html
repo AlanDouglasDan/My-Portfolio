@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😎 About</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <span class='bigger'>👦🏻 Alan Douglas - Software Developer / 😎 About</span>
+        <span class='d_control'>
+            <input type="checkbox" class="checkbox" id="chkx">
+            <label onclick="sound.play()" class="label" for="chkx">
+                <i class="fa fa-moon-o"></i>
+                <i class="fa fa-sun-o"></i>
+                <div class="ball"></div>
+            </label>
+        </span>
+    </header>
+
+    <script>
+        var darkMode = localStorage.getItem('dMode');
+
+        const enableDarkMode = () =>{
+            document.body.classList.add('darkmode');
+            localStorage.setItem('dMode', 'enabled');
+        }
+
+        const disableDarkMode = () =>{
+            document.body.classList.remove('darkmode')
+            localStorage.setItem('dMode', 'null');
+        }
+
+        if(darkMode === 'enabled'){
+            enableDarkMode();
+        }
+        else{
+            disableDarkMode();
+        }
+
+        chkx.addEventListener('change', () => {
+            darkMode = localStorage.getItem('dMode');            
+            
+            if(darkMode !== 'enabled'){
+                enableDarkMode();
+            }
+            else{
+                disableDarkMode();
+            }
+        });
+    </script>
+
+    <article>
+        <div class="komkom">
+            <div class='special_emoji'>😎</div>
+            <h2><b>About</b></h2>
+
+            <div class="push grid">
+                <div style='width: 100%;'>
+                    <p>When I'm not behind the keyboard puching random keys, I do enjoy hanging out with friends and if I can't go out, I play video games to relax with a competitive mindset.</p>
+                    <p>When I'm behind the keyboard, I listen to music, it helps me concentrate</p>
+                    <p>Music is a very important part of my daily life, I always need music in my ears 😂.</p>
+                    <p>In the mornings, after my 10 minutes meditation, I work out at the gym, I enjoy various physical pursuits and pushing the body to its limit and I realized that sitting down for hours was taking its toll on me and I had to do something about that.</p>
+                </div>
+                <div>
+                    <img src="images/me.JPG" alt="">
+                </div>
+            </div>
+            <div class="push"></div>
+        </div>
+    </article>
+</body>
+</html>
